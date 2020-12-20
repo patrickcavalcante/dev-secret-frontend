@@ -3,7 +3,18 @@ import styled from 'styled-components';
 import Input from './Input';
 import Button from './Button';
 
-const Form = styled.form``;
+const Form = styled.form`
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  max-width: 900px;
+  padding: 20px;
+
+  > input,
+  button {
+    margin: 10px;
+  }
+`;
 
 function NameEmailForm({ buttonText }) {
   return (

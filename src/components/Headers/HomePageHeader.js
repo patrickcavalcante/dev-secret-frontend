@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import ImageContainer from '../Containers/ImageContainer';
 import Logo from '../Logo';
+import NameEmailForm from '../NameEmailForm';
 
 const Container = styled.div`
   display: flex;
@@ -13,6 +14,14 @@ const Container = styled.div`
   padding-left: 40px;
 `;
 
+const FormDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+`;
+
 export default function HomePageHeader() {
   return (
     <div>
@@ -21,6 +30,9 @@ export default function HomePageHeader() {
           <Logo />
           <h2>A Melhor Brincadeixa do Natal</h2>
         </Container>
+        <FormDiv>
+          <NameEmailForm />
+        </FormDiv>
       </ImageContainer>
     </div>
   );
