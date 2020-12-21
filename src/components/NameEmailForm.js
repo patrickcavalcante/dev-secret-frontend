@@ -10,6 +10,10 @@ const Form = styled.form`
   max-width: 900px;
   padding: 20px;
 
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
+
   > input,
   button {
     margin: 10px;

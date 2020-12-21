@@ -10,6 +10,13 @@ const StyledButton = styled.button`
   margin: 10px 0;
   border-radius: 50px;
   background-color: ${({ theme }) => theme.colors.secundary};
+  &:focus {
+    border: none;
+    outline: none;
+  }
+  &::placeholder {
+    color: ${({ theme }) => theme.colors.primary};
+  }
 `;
 
 export default function Button(props) {
