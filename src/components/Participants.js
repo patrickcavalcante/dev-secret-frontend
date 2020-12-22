@@ -1,27 +1,51 @@
 import React from 'react';
 import styled from 'styled-components';
+import { RiDeleteBin2Fill } from 'react-icons/ri';
 
-const H4 = styled.h4``;
+const H4 = styled.h4`
+  text-align: center;
+`;
 
-const Container = styled.div``;
+const Container = styled.div`
+  display: flex;
+  padding: 5px 20px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
 
-const ParticipantDiv = styled.div``;
+const ParticipantDiv = styled.div`
+  display: flex;
+  align-items: center;
+`;
 
-const ParticipantDelete = styled.div``;
+const ParticipantDelete = styled.div`
+  color: ${({ theme }) => theme.colors.primary};
+  cursor: pointer;
+`;
 
-const Participant = ({}) => (
+const Participant = ({ showButton }) => (
   <ParticipantDiv>
-    <ParticipantDelete>Deletar</ParticipantDelete>
+    {showButton && (
+      <ParticipantDelete>
+        <RiDeleteBin2Fill />
+      </ParticipantDelete>
+    )}
     Nome (email@gmail.com)
   </ParticipantDiv>
 );
 
-export default function Participants({}) {
+export default function Participants({ showButton }) {
   return (
     <>
       <H4>Participantes:</H4>
       <Container>
-        <Participant />
+        <Participant showButton={showButton} />
+        <Participant showButton={showButton} />
+        <Participant showButton={showButton} />
+        <Participant showButton={showButton} />
+        <Participant showButton={showButton} />
+        <Participant showButton={showButton} />
       </Container>
     </>
   );
